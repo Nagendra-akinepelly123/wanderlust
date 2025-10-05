@@ -1,0 +1,172 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+}
+
+.navbar {
+  background-color: white;
+  height: 5rem;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+/* Main container */
+.f-info {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+/* Left & Right sections */
+.f-info-left,
+.f-info-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Links inside left section */
+.f-info-left-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.f-info-left-links a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.f-info-left-links a:hover {
+  background-color: #e9ecef;
+}
+
+/* Social icons section */
+.social-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-info a {
+  color: #555;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-info a:hover {
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .f-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .f-info-left,
+  .f-info-right {
+    justify-content: center;
+  }
+}
+
+/* card styling */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-title,
+.card-price,
+.card-location {
+  text-decoration: none;
+  margin: 0;
+  font-weight: 400 !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+
+.linking-list {
+  text-decoration: none;
+}
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white !important;
+}
+
+.btn {
+  background-color: #fe424d;
+  border: none !important;
+}
+
+/* edit page */
+.edit-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Show page */
+.btns {
+  color: white !important;
+  display: flex !important;
+  justify-content: space-evenly;
+
+  /* flex-direction: row !important; */
+}
+
+/* Error.ejs file */
+.stacktrace {
+  width: fit-content;
+}
+
+/* edit image styling */
+img {
+  width: 15rem;
+  height: 10rem;
+}
+
+/* @media (max-width: 768px) {
+  .stacktrace {
+    width: min-content;
+  }
+} */
