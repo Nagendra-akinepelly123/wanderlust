@@ -31,17 +31,11 @@ Wanderlust/
 ⚡ Installation & Setup
 
 # Clone repo
-
 git clone https://github.com/your-username/wanderlust.git
-
 # Move into folder
-
 cd wanderlust
-
 # Install dependencies
-
 npm install
-
 # Setup environment variables
 
 # Example: DB_URL, CLOUDINARY_KEY, SESSION_SECRET
