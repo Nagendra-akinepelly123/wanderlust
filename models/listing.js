@@ -1,4 +1,4 @@
-const { ref } = require("joi");
+const { ref, object } = require("joi");
 const mongoose = require("mongoose");
 const Review = require("./reviews");
 const { Schema } = mongoose;
@@ -42,6 +42,19 @@ const listingSchema = new mongoose.Schema({
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",
+  },
+  category: {
+    type: String,
+    default: "trending",
+    // enum: [
+    //   "mountains",
+    //   "trending",
+    //   "rooms",
+    //   "farms",
+    //   "pools",
+    //   "cities",
+    //   "camping",
+    // ],
   },
 });
 

@@ -36,53 +36,85 @@
     display: flex;
     align-items: center;
   }
+
+  #filters a {
+    text-decoration: none;
+    color: black;
+  }
 </style>
 <body>
   <div id="filters">
-    <div class="filter">
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p>Trending</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-bed"></i></div>
-      <p>Rooms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p>Iconic cities</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain"></i></div>
-      <p>Mountains</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-house"></i></div>
-      <p>castles</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing pools</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-campground"></i></div>
-      <p>Camping</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-cow"></i></div>
-      <p>Farms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-snowman"></i></div>
-      <p>Arctic</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-igloo"></i></div>
-      <p>Domes</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-play"></i></div>
-      <p>plays</p>
-    </div>
+    <a href="/listings">
+      <div class="filter">
+        <p>All</p>
+      </div>
+    </a>
+    <a href="/listings?category=trending">
+      <div class="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+      </div>
+    </a>
+    <a href="/listings?category=rooms">
+      <div class="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+      </div>
+    </a>
+    <a href="/listings?category=cities">
+      <div class="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic cities</p>
+      </div>
+    </a>
+    <a href="/listings?category=mountains">
+      <div class="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountains</p>
+      </div>
+    </a>
+    <a href="/listings?category=castles">
+      <div class="filter">
+        <div><i class="fa-solid fa-house"></i></div>
+        <p>castles</p>
+      </div>
+    </a>
+    <a href="/listings?category=pools">
+      <div class="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amazing pools</p>
+      </div>
+    </a>
+    <a href="/listings?category=campings">
+      <div class="filter">
+        <div><i class="fa-solid fa-campground"></i></div>
+        <p>Camping</p>
+      </div>
+    </a>
+    <a href="/listings?category=farms">
+      <div class="filter">
+        <div><i class="fa-solid fa-cow"></i></div>
+        <p>Farms</p>
+      </div>
+    </a>
+    <a href="/listings?category=arctic">
+      <div class="filter">
+        <div><i class="fa-solid fa-snowman"></i></div>
+        <p>Arctic</p>
+      </div>
+    </a>
+    <a href="/listings?category=domes">
+      <div class="filter">
+        <div><i class="fa-solid fa-igloo"></i></div>
+        <p>Domes</p>
+      </div>
+    </a>
+    <a href="/listings?category=plays">
+      <div class="filter">
+        <div><i class="fa-solid fa-play"></i></div>
+        <p>plays</p>
+      </div>
+    </a>
     <div class="tax-toggle">
       <div class="form-check-reverse form-switch">
         <input
