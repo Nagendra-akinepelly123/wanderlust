@@ -1,17 +1,41 @@
 <%layout("layouts/boilerplate")%>
 
 <style>
+  /* ===== Base Styles ===== */
   #filters {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    overflow-x: auto; /* Enables horizontal scroll */
+    white-space: nowrap; /* Prevents line breaks */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ccc transparent;
+    padding: 1rem;
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+  }
+
+  #filters::-webkit-scrollbar {
+    height: 6px; /* Horizontal scrollbar size */
+  }
+
+  #filters::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+
+  #filters::-webkit-scrollbar-thumb:hover {
+    background: #999;
   }
 
   .filter {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-right: 2rem;
-    margin-top: 1rem;
-    opacity: 0.5;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+    min-width: 70px; /* Keeps each filter box width consistent */
   }
 
   .filter:hover {
@@ -21,25 +45,70 @@
 
   .filter p {
     font-size: 0.8rem;
-  }
-
-  .tax-info {
-    display: none;
-  }
-
-  .tax-toggle {
-    border: 1px solid black;
-    border-radius: 1rem;
-    height: 3.5rem;
-    padding: 1rem;
-    margin-left: 3rem;
-    display: flex;
-    align-items: center;
+    margin-top: 0.3rem;
   }
 
   #filters a {
     text-decoration: none;
     color: black;
+  }
+
+  /* ===== Tax Toggle Button ===== */
+  .tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.5rem;
+    padding: 1rem 1.5rem;
+    margin-left: 1.5rem;
+    flex-shrink: 0; /* Prevents it from shrinking in scroll area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  /* ===== Responsive Adjustments ===== */
+
+  /* Mobile (≤600px) */
+  @media (max-width: 600px) {
+    #filters {
+      gap: 1rem;
+      padding: 0.5rem 0.8rem;
+    }
+
+    .filter {
+      min-width: 60px;
+    }
+
+    .filter p {
+      font-size: 0.7rem;
+    }
+
+    .tax-toggle {
+      height: 3rem;
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Tablet (600px–1024px) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    #filters {
+      gap: 1.2rem;
+    }
+
+    .filter {
+      min-width: 70px;
+    }
+
+    .filter p {
+      font-size: 0.8rem;
+    }
+
+    .tax-toggle {
+      height: 3.2rem;
+      padding: 0.8rem 1.2rem;
+    }
   }
 </style>
 <body>
