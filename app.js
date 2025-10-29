@@ -19,7 +19,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const dburl = process.env.MONGODB_ATLAS_URL;
 
 main()
@@ -31,7 +31,11 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(dburl);
+  await mongoose.connect(dburl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000,
+  });
 }
 
 // EJS setup
@@ -105,6 +109,11 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 //--------------user route-------
 app.use("/", userRouter);
+
+//home Route
+app.get("/", (req, res) => {
+  res.send("Wanderlust app is live ✅");
+});
 
 // Middleware for undefined routes
 app.use((req, res, next) => {
